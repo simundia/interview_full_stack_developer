@@ -32,14 +32,14 @@ ActiveRecord::Schema.define(version: 2021_09_17_072345) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "seen_ressources", force: :cascade do |t|
+  create_table "seen_resources", force: :cascade do |t|
     t.integer "user_id"
     t.integer "resource_id"
     t.integer "count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["resource_id"], name: "index_seen_ressources_on_resource_id"
-    t.index ["user_id"], name: "index_seen_ressources_on_user_id"
+    t.index ["resource_id"], name: "index_seen_resources_on_resource_id"
+    t.index ["user_id"], name: "index_seen_resources_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,6 +50,6 @@ ActiveRecord::Schema.define(version: 2021_09_17_072345) do
 
   add_foreign_key "scope_users", "scopes"
   add_foreign_key "scope_users", "users"
-  add_foreign_key "seen_ressources", "resources"
-  add_foreign_key "seen_ressources", "users"
+  add_foreign_key "seen_resources", "resources"
+  add_foreign_key "seen_resources", "users"
 end
