@@ -40,6 +40,20 @@ user4 = User.create!(email: 'email@user4.com')
 user5 = User.create!(email: 'email@user5.com')
 
 # 5. Create the seen_resources
-seen_resource1 = SeenResource.create!(user_id: )
+seen_resource1 = SeenResource.create!(user_id: user1.id, resource_id: resource10.id, count: 3)
+seen_resource2 = SeenResource.create!(user_id: user2.id, resource_id: resource9.id, count: 2)
+seen_resource3 = SeenResource.create!(user_id: user3.id, resource_id: resource8.id, count: 1)
+seen_resource4 = SeenResource.create!(user_id: user4.id, resource_id: resource7.id, count: 2)
+seen_resource5 = SeenResource.create!(user_id: user5.id, resource_id: resource4.id, count: 7)
+seen_resource6 = SeenResource.create!(user_id: user1.id, resource_id: resource2.id, count: 2)
+seen_resource7 = SeenResource.create!(user_id: user2.id, resource_id: resource4.id, count: 3)
+seen_resource8 = SeenResource.create!(user_id: user3.id, resource_id: resource7.id, count: 2)
+seen_resource9 = SeenResource.create!(user_id: user4.id, resource_id: resource3.id, count: 1)
+seen_resource10 = SeenResource.create!(user_id: user5.id, resource_id: resource9.id, count: 3)
 
 # 6. Create the scope_users
+scope_user_1 = ScopeUser.create!(scope_id: scope1.id, user_id: user1.id)
+scope_user_2 = ScopeUser.create!(scope_id: scope2.id, user_id: user2.id)
+scope_user_3 = ScopeUser.create!(scope_id: scope1.id, user_id: user3.id)
+scope_user_4 = ScopeUser.create!(scope_id: scope2.id, user_id: user4.id)
+scope_user_5 = ScopeUser.create!(scope_id: scope1.id, user_id: user5.id)
