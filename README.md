@@ -5,7 +5,7 @@ Bienvenue sur le repo du test technique pour l'entretien de recrutement Dévelop
 Avant l'entretien, merci de cloner ce repo et de suivre les instructions suivantes :
 
 * Ruby version
-2.7.0
+* 3.2.2
 
 * Commandes à lancer après le clone \
 ```rails db:create``` \
